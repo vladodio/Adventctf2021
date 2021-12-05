@@ -21,7 +21,26 @@ class board():
 				self.board[i][startY] += 1
 		#diagonal
 		else:
-			pass
+			# going right
+			if(startX < endX):
+				diag_diff_X = 1
+			
+			# going left
+			else:
+				diag_diff_X = -1
+
+			# going up
+			if(startY < endY):
+				diag_diff_Y = 1
+			# going down
+			else:
+				diag_diff_Y = -1
+
+			length = max(startX, endX) - min(startX, endX)
+			print(length)
+			for i in range(length+1):
+				#print(i, startX + (i*diag_diff_X), startY + (i+diag_diff_Y))
+				self.board[startX + (i*diag_diff_X)][startY + (i*diag_diff_Y)] += 1
 
 
 	def count(self):
