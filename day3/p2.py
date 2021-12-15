@@ -43,9 +43,23 @@ def co2(arr):
 		place += 1
 	return arr
 
+def o2(arr):
+	place = 0
+	while(len(arr) != 1):
+		arr = remove(True, arr, place)
+		place += 1
+	return arr
+
 def main():
 	arr = openFile()
-	print(co2(arr))
+	co2val = co2(arr)[0].replace("\n", "") 
+	o2val = o2(arr)[0].replace("\n", "")
+
+	co2val = int(co2val, 2)
+	o2val = int(o2val, 2)
+
+	print(co2val, o2val)
+	print(co2val*o2val)
 
 
 

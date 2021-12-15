@@ -105,5 +105,7 @@ for i in range(len(results)):
 	for j in range(len(results[i])):
 		item = ''.join(sorted(results[i][j]))
 		out_val += str(found_map.index(item))
+	print(out_val)
 	sum_all += int(out_val)
+	
 print(sum_all)
